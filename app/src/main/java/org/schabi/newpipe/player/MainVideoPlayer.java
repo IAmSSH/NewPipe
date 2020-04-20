@@ -1002,6 +1002,7 @@ public final class MainVideoPlayer extends AppCompatActivity
             animateView(playPauseButton, AnimationUtils.Type.SCALE_AND_ALPHA, false, 80, 0, () -> {
                 playPauseButton.setImageResource(R.drawable.ic_pause_white);
                 animatePlayButtons(true, 200);
+                playPauseButton.requestFocus();
                 animateView(closeButton, false, DEFAULT_CONTROLS_DURATION);
             });
 
@@ -1014,6 +1015,7 @@ public final class MainVideoPlayer extends AppCompatActivity
             animateView(playPauseButton, AnimationUtils.Type.SCALE_AND_ALPHA, false, 80, 0, () -> {
                 playPauseButton.setImageResource(R.drawable.ic_play_arrow_white);
                 animatePlayButtons(true, 200);
+                playPauseButton.requestFocus();
                 animateView(closeButton, false, DEFAULT_CONTROLS_DURATION);
             });
 
@@ -1075,6 +1077,7 @@ public final class MainVideoPlayer extends AppCompatActivity
                 return;
             }
 
+            playPauseButton.requestFocus();
             super.showControlsThenHide();
         }
 
@@ -1084,6 +1087,7 @@ public final class MainVideoPlayer extends AppCompatActivity
                 return;
             }
 
+            playPauseButton.requestFocus();
             super.showControls(duration);
         }
 
